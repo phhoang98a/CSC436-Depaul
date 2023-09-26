@@ -1,0 +1,2 @@
+- Firstly, execute the command "npm install".
+- The HTML personal biography is in biography.html
