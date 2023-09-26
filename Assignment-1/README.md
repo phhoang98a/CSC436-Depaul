@@ -1,2 +1,3 @@
 - Firstly, execute the command "npm install".
-- The HTML personal biography is in biography.html
+- For the part 1: run biography.html which is the HTML personal biography.
+- For the part 2: run npm test to execute the hw1.test.js
