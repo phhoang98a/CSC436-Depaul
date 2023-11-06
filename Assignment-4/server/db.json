@@ -1,0 +1,20 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "do CSC 436 assignment",
+      "description": "Lab 4",
+      "author": "henry",
+      "complete": false,
+      "dateCreated": "11/6/2023, 8:21:27 AM",
+      "dateCompleted": 1699294194593
+    }
+  ],
+  "users": [
+    {
+      "email": "henry@example.com",
+      "password": "$2a$10$sy/w8gcaLYqaAZf.zBVCc.oiUPX2OYb0RHojXNuvEPAqDyfqcxABi",
+      "id": 1
+    }
+  ]
+}
