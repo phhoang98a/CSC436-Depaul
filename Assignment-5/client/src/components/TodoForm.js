@@ -11,7 +11,7 @@ function TodoForm() {
   const [todo, createTodo] = useResource(({ title, description }) => ({
     url: "/todos",
     method: "post",
-    data: { title, description},
+    data: { title, description, author: user.username },
     headers: { Authorization: `${user?.accessToken}` },
   }));
 

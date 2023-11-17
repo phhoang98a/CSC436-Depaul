@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
 const Todos = require("../model/todoSchema");
+const User = require("../model/userSchema");
 
 router.use(function (req, res, next) {
   if (req.header("Authorization")) {
@@ -17,9 +18,10 @@ router.use(function (req, res, next) {
 });
 
 router.get("/", async function (req, res) {
+  const user = await User.findById(req.payload.id);
   Todos.find()
     .where("author")
-    .equals(req.payload.username)
+    .equals(user.username)
     .then((todos) => {
       return res.status(200).json(todos);
     })
@@ -32,7 +34,7 @@ router.post("/", async function (req, res) {
   const todo = new Todos({
     title: req.body.title,
     description: req.body.description,
-    author: req.payload.username,
+    author: req.body.author,
     complete: false,
     dateCreated: new Date(),
     dateCompleted: new Date()

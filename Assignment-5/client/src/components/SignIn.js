@@ -53,7 +53,6 @@ const SignIn = ({ setIsLogin }) => {
       />
       <button onClick={handleLogin}>Login</button>
       <h3 style={{color:"red"}}>{notification}</h3>
-      <h4> You can sign in the default account (username:henry, password:1234)</h4>
     </div>
   );
 }

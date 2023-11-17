@@ -29,7 +29,7 @@ router.post("/login", async (req, res) => {
   // compare user hash password with input password
   if (user && bcrypt.compareSync(password, user.password)) {
     // create jwt with timetolive
-    const accessToken = jwt.sign({ username }, process.env.ACCESS_TOKEN_SECRET);
+    const accessToken = jwt.sign({ id:user._id }, process.env.ACCESS_TOKEN_SECRET);
     res.status(200).json({ accessToken, username });
   } else {
     return res.status(401).json({ error: "Invalid credentials" });
